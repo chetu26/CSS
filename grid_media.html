@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grid and Media Queries CSS</title>
+  <style>
+    /* Grid Properties */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 100px);
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
+      grid-gap: 10px 20px;
+    }
+
+    .grid-item {
+      background-color: lightblue;
+      border: 1px solid black;
+    }
+
+    /* Media Queries */
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 100px);
+        grid-gap: 5px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 100px);
+        grid-gap: 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Grid and Media Queries CSS</h1>
+
+  <h2>Grid Properties</h2>
+  <div class="grid-container">
+    <div class="grid-item">Grid Item 1</div>
+    <div class="grid-item">Grid Item 2</div>
+    <div class="grid-item">Grid Item 3</div>
+    <div class="grid-item">Grid Item 4</div>
+    <div class="grid-item">Grid Item 5</div>
+    <div class="grid-item">Grid Item 6</div>
+    <div class="grid-item">Grid Item 7</div>
+    <div class="grid-item">Grid Item 8</div>
+    <div class="grid-item">Grid Item 9</div>
+  </div>
+
+  <h2>Media Queries</h2>
+  <p>This grid will adjust based on the screen size:</p>
+  <ul>
+    <li>On screens wider than 600px, it will have 3 columns.</li>
+    <li>On screens between 400px and 600px, it will have 2 columns.</li>
+    <li>On screens narrower than 400px, it will have 1 column.</li>
+  </ul>
+</body>
+</html>

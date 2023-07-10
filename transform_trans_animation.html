@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transform, Transition, and Animation CSS</title>
+  <style>
+    /* Transform Properties */
+    .transform-box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      transform: rotate(45deg) scale(1.5);
+      transform-origin: top left;
+    }
+
+    /* CSS Transitions */
+    .transition-box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      transition-property: background-color, width;
+      transition-duration: 1s;
+    }
+
+    .transition-box:hover {
+      background-color: lightgreen;
+      width: 300px;
+    }
+
+    /* CSS Animations */
+    .animation-box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      animation-name: move;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes move {
+      0% { transform: translateX(0px); }
+      50% { transform: translateX(200px); }
+      100% { transform: translateX(0px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Transform, Transition, and Animation CSS</h1>
+
+  <h2>Transform Properties</h2>
+  <div class="transform-box">Transform Box</div>
+
+  <h2>CSS Transitions</h2>
+  <div class="transition-box">Transition Box</div>
+
+  <h2>CSS Animations</h2>
+  <div class="animation-box">Animation Box</div>
+</body>
+</html>

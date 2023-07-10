@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox CSS</title>
+  <style>
+    /* Flex Container */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: space-between;
+    }
+
+    /* Flex Items */
+    .flex-item {
+      order: 2;
+      align-self: flex-start;
+      flex-grow: 1;
+      flex-shrink: 1;
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      border: 1px solid black;
+      margin: 10px;
+    }
+
+    /* Clear Float */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Float */
+    .float-left {
+      float: left;
+    }
+
+    .float-right {
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flexbox CSS</h1>
+
+  <h2>Float Property</h2>
+  <div class="clearfix">
+    <div class="float-left">Float Left</div>
+    <div class="float-right">Float Right</div>
+  </div>
+
+  <h2>Clear Property</h2>
+  <div class="clearfix">
+    <div class="float-left">Float Left</div>
+    <div class="float-right">Float Right</div>
+    <div style="clear: both;">Clear Both</div>
+  </div>
+
+  <h2>CSS Flexbox</h2>
+  <div class="flex-container">
+    <div class="flex-item">Flex Item 1</div>
+    <div class="flex-item">Flex Item 2</div>
+    <div class="flex-item">Flex Item 3</div>
+    <div class="flex-item">Flex Item 4</div>
+    <div class="flex-item">Flex Item 5</div>
+    <div class="flex-item">Flex Item 6</div>
+  </div>
+
+  <h2>Flex-direction Property</h2>
+  <div class="flex-container" style="flex-direction: column;">
+    <div class="flex-item">Flex Item 1</div>
+    <div class="flex-item">Flex Item 2</div>
+    <div class="flex-item">Flex Item 3</div>
+  </div>
+</body>
+</html>
